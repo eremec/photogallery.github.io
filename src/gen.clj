@@ -14,11 +14,14 @@
    [:div.label label]])
 
 (defn video [url label]
-  (str "<div><iframe width=\"900px\" src="
-       url
-       "frameborder=\"0\" allow=\"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
-       label
-       "</div>"))
+  [:div
+   [:iframe {:width "900px"
+             :height "900px"
+             :src url
+             :frameborder "0"
+             :allow "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+             :allowfullscreen true}]
+   [:div.label label]])
 
 (def day1-2
   [{:type :image
@@ -119,10 +122,63 @@
    {:type :image
     :label "Дальше мы пройдем еще один перевал и будем двигаться к вершине."
     :url "https://sun9-32.userapi.com/mdtCS1Evtu_QAtSN5J-csOxbW3KQJZJvQJyknQ/JUIXhRJbfX8.jpg"}
+   {:type :video
+    :label "Был дождь, поэтому надели дождевики."
+    :url "https://www.youtube.com/embed/kY7V4L10PLw"}
+   {:type :image
+    :url "https://sun9-43.userapi.com/x_YjrSr72eq3RVd3jY-5vFRuS3-oXs72mYt5vw/kcOiCE26aoI.jpg"}
+   {:type :image
+    :url "https://sun9-22.userapi.com/kk-m15PaX9VRd45uA7iCOe35PUfRHrRfHNoaog/IBKgvBr6pDc.jpg"}
+   {:type :image
+    :label "Прошли второй перевал, который я почему-то не сфотографировал.
+ Отличался от первого отсутствием тропы, пробирались просто по куче камней. Вид, открывшийся после перевала."
+    :url "https://sun9-58.userapi.com/Sw0IzdcjkmFQNRKDUMGZkzwYl8WV25_xe1mR2g/ysz86eGPgUc.jpg"}
+   {:type :image
+    :url "https://sun9-74.userapi.com/uJ8kigu5QPD24yTXuOTe9yKBRjozBQrIekOTlw/OtqTQxfzp74.jpg"}
+   {:type :image
+    :url "https://sun9-66.userapi.com/dVRELZeYsBSp1g1qNZpq7dzDPRmItCNG90oLHA/iaEo5cve-Go.jpg"}
+   {:type :image
+    :url "https://sun9-30.userapi.com/RJjR4rwQ-i6XHq6UPm_w_RRevyAslu30GFuMSQ/5zb6gU-RRU8.jpg"}
+   {:type :image
+    :url "https://sun9-58.userapi.com/Dr6lXth9IsGLp48VI2UsnTEjtqf9pmNLBsSdmQ/3t_L9KJeEVY.jpg"}
+   {:type :image
+    :label "Более полный вид на озеро Имандра."
+    :url "https://sun9-41.userapi.com/_4ANTZ5yTPQ3eRUbKiH5A11JVdJYe4FYuRDU6w/RfK2LXW0Pi4.jpg"}
+   {:type :image
+    :url "https://sun9-65.userapi.com/x7_ndkRewuWfoeJIe3YhdX6NkPXXMpMUgLV69A/Eji821KkvKk.jpg"}
+   {:type :image
+    :label "К вершине."
+    :url "https://sun9-39.userapi.com/SaFUI-HWp5ZuWmZGRm0M5mIMCxYau8ptcB73Sw/tFNVa6c5d2U.jpg"}
+   {:type :video
+    :url "https://www.youtube.com/embed/V9Nftwc5oMQ"}
+   {:type :image
+    :url "https://sun9-16.userapi.com/RlQc01rH3aU_vRN5Yslb-IYBY9SqJdWTviKb9w/r5Awtws7EeU.jpg"}
+   {:type :video
+    :url "https://www.youtube.com/embed/G2SrzAtYFeE"}
+   {:type :image
+    :url "https://sun9-51.userapi.com/1Z4Fe96DH3bvYgsSxoBaov78yLLC1eq3hn-fmA/nWqQYl4Ap0o.jpg"}
+   {:type :image
+    :url "https://sun9-24.userapi.com/0pCmeAslb81eIxnn6u6rliqdBWkj7KPXoBwTzQ/GtGMzNxEUmE.jpg"}
+   {:type :image
+    :url "https://sun9-36.userapi.com/23_wIMHuCbnvC1mJI65yNfg39N1lemc8OO_Xgw/JFb57Yi3KN8.jpg"}
+   {:type :image
+    :url "https://sun9-31.userapi.com/xcF2QsrwmaZRY4h_2CccONuyVjn4wSJFIoInxw/P7O1wPTkq8Q.jpg"}
+   {:type :image
+    :label "И вниз."
+    :url "https://sun9-48.userapi.com/7uzdGYYldNMjNxbdXYjXke7xcwbsdcXYy9HlWA/KDuGOYE-28g.jpg"}
+   {:type :image
+    :label "В кустах иногда встречаются куропатки."
+    :url "https://sun9-39.userapi.com/QbqLQukIGjayUcOcAXhIiSbMSDeT-AYc7swpSQ/0h2c36RcJ7o.jpg"}
+   {:type :image
+    :url "https://sun9-36.userapi.com/YyJ4AvqqLfHgMdO4XkR7_bggOeXtF_nZ0hXGXA/beloaq8GanM.jpg"}
+   {:type :image
+    :url "https://sun9-7.userapi.com/aRna_EJHsoGSKNgNlmjsLPzpHVNE3ZplEe5xIg/0VlRoejRNX4.jpg"}
+   {:type :image
+    :url "https://sun9-33.userapi.com/igLP0HjW4AIxlXH1XKFYC3EDVw-4Tsdsz2KwIw/5aMDmia87j0.jpg"}
+   {:type :image
+    :url "https://sun9-16.userapi.com/2CV7EQazR7aK3mBKLjJtBEeleffDhZNTx5fCBQ/pn1Rd8F97Pg.jpg"}
 
-   #_{:type :video
-    :label "Течет вода"
-    :url "https://www.youtube.com/embed/tM6Kvw7rQ50"}])
+   ])
 
 (defn gen []
   (->> day1-2
