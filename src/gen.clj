@@ -9,7 +9,7 @@
 
 (defn image [url label]
   [:div.image
-   [:a {:href url}
+   [:a {:href url :target "_blank"}
     [:img {:src url :width "900px"}]]
    [:div.label label]])
 
