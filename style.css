@@ -1,0 +1,14 @@
+.content {
+    width: 900px;
+    margin: auto;
+}
+
+.image {
+    width: 900px;
+    margin-bottom: 40px;
+}
+
+.label {
+    font-size: 18px;
+    padding-top: 10px;
+}
